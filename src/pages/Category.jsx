@@ -19,7 +19,7 @@ function Category() {
   const params = useParams();
 
   useEffect(() => {
-    const fetchListing = async () => {
+    const fetchListings = async () => {
       try {
         //Get reference
         const listingsRef = collection(db, "listings");
@@ -45,7 +45,7 @@ function Category() {
       }
     };
 
-    fetchListing();
+    fetchListings();
   }, [params.categoryName]);
   return (
     <div className="category">
