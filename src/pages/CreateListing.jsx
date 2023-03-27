@@ -90,6 +90,7 @@ function CreateListing() {
     let geolocation = {};
     let location;
 
+    //Take latitude & longitude from MAP
     if (geolocationEnabled) {
       const response = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
@@ -110,7 +111,9 @@ function CreateListing() {
         toast.error("Please enter a correct address");
         return;
       }
-    } else {
+    }
+    //Take latitude & longitude from fomr
+    else {
       geolocation.lat = latitude;
       geolocation.lng = longitude;
     }
@@ -257,7 +260,7 @@ function CreateListing() {
 
           <div className="formRooms flex">
             <div>
-              <label className="formLabel">Bedrooms</label>
+              <label className="formLabel">Bed</label>
               <input
                 className="formInputSmall"
                 type="number"

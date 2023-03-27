@@ -36,7 +36,7 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
             <p className="categoryListingInfoText">
               {listing.bedrooms > 1
                 ? `${listing.bedrooms} Bedrooms`
-                : "1 Bedrom"}
+                : "1 Bedroom"}
             </p>
             <img src={bathtubIcon} alt="bath" />
             <p className="categoryListingInfoText">

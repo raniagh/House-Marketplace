@@ -55,7 +55,7 @@ function EditListing() {
   const navigate = useNavigate();
   const isMounted = useRef(true);
 
-  //Redirect if listing is not user's
+  //Redirect if listing is not user's listing
   useEffect(() => {
     if (listing && listing.userRef !== auth.currentUser.uid) {
       toast.error("You can not edit that listing");
